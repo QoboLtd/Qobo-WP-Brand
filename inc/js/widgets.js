@@ -1,3 +1,7 @@
+/**
+ * Hides all other input fields, for widgets settings form
+ * 
+ */
 function qbdevby_widgets_hideAllOtherInputFields_toggle(id, toggle){
 	element = document.getElementById(id);
 	if(!element)
