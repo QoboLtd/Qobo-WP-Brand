@@ -1,5 +1,18 @@
 <?php
-class QBDEVBY_DevelopedBy {    
+/**
+ * Plugin for 'Developed by'
+ *
+ * @author     Qobo ltd
+ * @version    0.1
+ * @link       http://www.qobo.biz
+ */
+class QBDEVBY_DevelopedBy {
+    
+    /**
+     * Prints 'Developed by'
+     * 
+     * @param array $options array of options for 'Developed by' snippet (title, style, text, text_style, light_colour_icon)
+     */
     public static function print_developedby($options){
         $title = $options['title'];
         $style = empty($options['style'])? '':' style="'.$options['style'].'"';
@@ -23,6 +36,11 @@ class QBDEVBY_DevelopedBy {
         <?php
     }
     
+    /**
+     * Prints 'Developed by' for footer
+     * 
+     * Based on corresponding settings
+     */
     public static function print_developedby_footer(){
       $options = get_option(QBDEVBY_Settings::OPTION_NAME);
     
@@ -32,6 +50,11 @@ class QBDEVBY_DevelopedBy {
       }
     }
     
+    /**
+     * Enqueue script
+     * 
+     * Current enqueued script is for widget settings form only to be added at the admin widgets page
+     */
     public static function admin_enqueue_script($hook) {
         if('widgets.php' == $hook)
             wp_enqueue_script('qbdevby-widgets-script', plugins_url( '/inc/js/widgets.js', __FILE__ ));
