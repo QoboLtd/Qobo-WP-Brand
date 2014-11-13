@@ -4,7 +4,7 @@ class QBDEVBY_Settings {
     const OPTION_NAME = 'qbdevby_settings';
     const OPTION_TITLE = 'Developed by';
     
-    protected static $data = array(
+    protected $data = array(
         'title' => null,
         'text' => null,
         'text_style' => null,
