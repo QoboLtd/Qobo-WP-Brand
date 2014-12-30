@@ -1,11 +1,4 @@
 <?php
-/**
- * Plugin for 'Developed by'
- *
- * @author     Qobo ltd
- * @version    0.1
- * @link       http://www.qobo.biz
- */
 class QBDEVBY_DevelopedBy {
     
     /**

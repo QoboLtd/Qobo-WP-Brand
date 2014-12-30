@@ -4,7 +4,7 @@ Plugin Name: Qobo - Developed By
 Plugin URI: http://www.qobo.biz
 Description: Plugin for 'Developed by'
 Author: Qobo ltd
-Version: 1.0.1
+Version: 1.0.0
 Author URI: http://www.qobo.biz
 */
 
