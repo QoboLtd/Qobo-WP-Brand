@@ -12,7 +12,6 @@ class QBDEVBY_DevelopedBy {
         $text = $options['text'];
         $text_style = empty($options['text_style'])? '':' style="'.$options['text_style'].'"';
         $icon = null;
-        $icon_over = QBDEVBY__PLUGIN_DIR_URL.'/inc/images/icon_hover.png';
         $link = $options['link'];
         
         if($options['light_colour_icon'])
@@ -24,7 +23,7 @@ class QBDEVBY_DevelopedBy {
         <!-- Developed by -->
         <?php echo $title;?>
         <p<?php echo $style;?>>
-          <span<?php echo $text_style;?>><?php echo $text;?>&nbsp;<a href=<?php echo $link;?>><img src="<?php echo $icon;?>" onmouseover="this.src='<?php echo $icon_over;?>'" onmouseout="this.src='<?php echo $icon;?>'"/></a></span>
+          <span<?php echo $text_style;?>><?php echo $text;?>&nbsp;<a title="Designed and Developed by Qobo" href=<?php echo $link;?>><img src="<?php echo $icon;?>"/></a></span>
         </p>
         <?php
     }
