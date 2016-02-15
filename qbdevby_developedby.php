@@ -23,7 +23,7 @@ class QBDEVBY_DevelopedBy {
         <!-- Developed by -->
         <?php echo $title;?>
         <p<?php echo $style;?>>
-          <span<?php echo $text_style;?>><?php echo $text;?>&nbsp;<a title="Designed and Developed by Qobo" href=<?php echo $link;?>><img src="<?php echo $icon;?>"/></a></span>
+          <span<?php echo $text_style;?>><?php echo $text;?>&nbsp;<a title="Designed and Developed by Qobo" href=<?php echo $link;?> target="_blank"><img src="<?php echo $icon;?>"/></a></span>
         </p>
         <?php
     }
