@@ -1,0 +1,8 @@
+{
+	"name": "qobo/qobo-wp-brand",
+	"description": "Qobo plugin for WordPress branding",
+	"type": "wordpress-plugin",
+	"keywords": ["wordpress"],
+	"license": "GPL-2.0"
+
+}
