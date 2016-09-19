@@ -13,6 +13,8 @@ class QBDEVBY_Widget extends WP_Widget {
     function widget($args, $instance){
         $options = empty($instance['override_settings'])? get_option(QBDEVBY_Settings::OPTION_NAME):$instance;
         
+
+        
         $title = apply_filters( 'widget_title', $options['title'] );
         $title_tag = $title;
         if(!empty($title))
@@ -32,6 +34,7 @@ class QBDEVBY_Widget extends WP_Widget {
         $instance['text_style'] = (!empty($new_instance['text_style']))? strip_tags($new_instance['text_style']):'';
         $instance['style'] = (!empty($new_instance['style']))? strip_tags($new_instance['style']):'';
         $instance['light_colour_icon'] = (!empty($new_instance['light_colour_icon']))? strip_tags($new_instance['light_colour_icon']):0;
+        $instance['custom_icon'] = (!empty($new_instance['custom_icon']))? strip_tags($new_instance['custom_icon']):0;
         $instance['link'] = (!empty($new_instance['link']))? strip_tags($new_instance['link']):'';
       
         return $instance;
@@ -44,6 +47,7 @@ class QBDEVBY_Widget extends WP_Widget {
         $text_style = isset($instance['text_style'])? $instance['text_style']:'';
         $style = isset($instance['style'])? $instance['style']:'text-align:center;';
         $light_colour_icon = empty($instance['light_colour_icon'])? 0:1;
+        $custom_icon = empty($instance['custom_icon'])? 0:1;
         $link = isset($instance['link'])? $instance['link']:'http://www.qobo.biz';
         ?>
         <p>
@@ -69,6 +73,10 @@ class QBDEVBY_Widget extends WP_Widget {
         <p>
           <input class="widefat" id="<?php echo $this->get_field_id('light_colour_icon'); ?>" name="<?php echo $this->get_field_name('light_colour_icon'); ?>" type="checkbox" value="1" <?php if($light_colour_icon) echo 'checked=""'; ?> />
           <label for="<?php echo $this->get_field_id('light_colour_icon'); ?>"><?php _e('Light color icon', 'qobo-developedby'); ?></label>
+        </p>
+        <p>
+            <input class="widefat" id="<?php echo $this->get_field_id('custom_icon'); ?>" name="<?php echo $this->get_field_name('custom_icon'); ?>" type="checkbox" value="1" <?php if($custom_icon) echo 'checked=""'; ?> />
+            <label for="<?php echo $this->get_field_id('custom_icon'); ?>"><?php _e('Custom icon', 'qobo-developedby'); ?></label>
         </p>
         <p>
           <label for="<?php echo $this->get_field_id('link'); ?>"><?php _e('Link:', 'qobo-developedby'); ?></label>
