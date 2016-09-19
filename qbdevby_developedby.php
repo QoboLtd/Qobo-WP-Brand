@@ -16,7 +16,7 @@ class QBDEVBY_DevelopedBy {
 
 
         if ($options['custom_icon']){
-            $icon = get_stylesheet_directory_uri() . "/images/footer/qobo.png";
+            $icon = get_stylesheet_directory_uri() . "/images/footer/icon.png";
         }else{
             if($options['light_colour_icon'])
                 $icon = QBDEVBY__PLUGIN_DIR_URL.'/inc/images/icon_light.png';

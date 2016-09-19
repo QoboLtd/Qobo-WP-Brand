@@ -104,7 +104,7 @@ class QBDEVBY_Settings
                 </table>
 
                 <p>
-                    * if Custom Icon is selected the logo should be under /images/footer/ directory with name qobo.png
+                    * if Custom Icon is selected the logo should be under /images/footer/ directory with name icon.png
                 </p>
 
                 <p class="submit">
