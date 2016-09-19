@@ -13,11 +13,18 @@ class QBDEVBY_DevelopedBy {
         $text_style = empty($options['text_style'])? '':' style="'.$options['text_style'].'"';
         $icon = null;
         $link = $options['link'];
-        
-        if($options['light_colour_icon'])
-            $icon = QBDEVBY__PLUGIN_DIR_URL.'/inc/images/icon_light.png';
-        else
-           $icon = QBDEVBY__PLUGIN_DIR_URL.'/inc/images/icon_dark.png';
+
+
+        if ($options['custom_icon']){
+            $icon = get_stylesheet_directory_uri() . "/images/footer/qobo.png";
+        }else{
+            if($options['light_colour_icon'])
+                $icon = QBDEVBY__PLUGIN_DIR_URL.'/inc/images/icon_light.png';
+            else
+                $icon = QBDEVBY__PLUGIN_DIR_URL.'/inc/images/icon_dark.png';
+        }
+
+
         
         ?>
         <!-- Developed by -->
