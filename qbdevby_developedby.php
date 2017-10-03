@@ -40,7 +40,7 @@ class QBDEVBY_DevelopedBy
             </p>
         </div>
         <div class="widget_qbdevby_widget_logo">
-            <a title="Designed and Developed by Qobo" href=<?php echo $link; ?> target="_blank"><img
+            <a title="Designed and Developed by Qobo" href="<?php echo $link; ?>" target="_blank"><img
             alt="Designed and Developed by Qobo" src="<?php echo $icon; ?>"/></a>
         </div>
 
