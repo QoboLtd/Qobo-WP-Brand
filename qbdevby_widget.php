@@ -1,7 +1,7 @@
 <?php
 class QBDEVBY_Widget extends WP_Widget {
 
-    function QBDEVBY_Widget(){
+    public function __construct(){
         // Instantiate the parent object
         parent::__construct(
             'QBDEVBY_Widget',
@@ -10,7 +10,7 @@ class QBDEVBY_Widget extends WP_Widget {
             );
     }
 
-    function widget($args, $instance){
+    public function widget($args, $instance){
         $options = empty($instance['override_settings'])? get_option(QBDEVBY_Settings::OPTION_NAME):$instance;
         
 
@@ -26,7 +26,7 @@ class QBDEVBY_Widget extends WP_Widget {
         echo $args['after_widget'];
     }
 
-    function update( $new_instance, $old_instance ) {
+    public function update( $new_instance, $old_instance ) {
         $instance = array();
         $instance['override_settings'] = (!empty($new_instance['override_settings']))? strip_tags($new_instance['override_settings']):0;
         $instance['title'] = (!empty($new_instance['title']))? strip_tags($new_instance['title']):'';
@@ -40,7 +40,7 @@ class QBDEVBY_Widget extends WP_Widget {
         return $instance;
     }
     
-    function form( $instance ) {
+    public function form( $instance ) {
         $override_settings = empty($instance['override_settings'])? 0:1;
         $title = isset($instance['title'])? $instance['title']:__('', 'qobocrm-realestates-property-view');
         $text = isset($instance['text'])? $instance['text']:__('Developed by', 'qobo-developedby');
